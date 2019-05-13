@@ -4,6 +4,7 @@ pipeline {
         stage('Env Print') {
             steps {
                 sh 'env'
+                println "$PATH"
             }
         }
     }
