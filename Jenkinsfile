@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Env Print') {
             steps {
-                sh 'env'
+                sh 'env > output.out'
                 println "$PATH"
+                archiveArtifacts 'output.out'
             }
         }
     }
